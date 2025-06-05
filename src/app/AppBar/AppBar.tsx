@@ -21,7 +21,7 @@ export const AppBar = () => {
   const { i18n, t } = useTranslation('translation');
   // ToDo переделать на enum и вынести текст в i18n
   const pages = [EPages.TOURNAMENTS, EPages.ABOUT_US];
-  const settings = ['Профиль', 'Статистика', 'Выход'];
+  const settings = ['Профиль', 'Статистика', 'Настройки', 'Выход'];
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,

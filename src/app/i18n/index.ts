@@ -25,4 +25,3 @@ i18next
   });
 
 export * from 'react-i18next';
-export default i18next;

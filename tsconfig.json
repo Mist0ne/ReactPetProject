@@ -20,7 +20,8 @@
     "target": "ESNext",
     "types": [
       "vite"
-    ]
+    ],
+    "baseUrl": "src",
   },
   "include": [
     "./src"

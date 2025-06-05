@@ -45,8 +45,9 @@
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2",
-    "vite": "^5.3.10",
-    "vitest": "^3.0.9"
+    "vite": "6.3.4",
+    "vitest": "^3.0.9",
+    "vite-tsconfig-paths": "5.1.4"
   },
   "license": "MIT"
 }
