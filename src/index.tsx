@@ -11,7 +11,7 @@ if (!rootNode) throw new Error('No root node found');
 const root = createRoot(rootNode);
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} defaultMode="dark">
       <App />
     </ThemeProvider>
   </React.StrictMode>,

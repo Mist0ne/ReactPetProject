@@ -18,10 +18,10 @@ import { useTranslation } from '../i18n';
 import { EPages } from './AppBar.types';
 
 export const AppBar = () => {
-  const { i18n, t } = useTranslation('translation');
+  const { t } = useTranslation('translation');
   // ToDo переделать на enum и вынести текст в i18n
   const pages = [EPages.TOURNAMENTS, EPages.ABOUT_US];
-  const settings = ['Профиль', 'Статистика', 'Настройки', 'Выход'];
+  const settings = ['Профиль', 'Статистика', 'Выход'];
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,
@@ -119,18 +119,6 @@ export const AppBar = () => {
             }}>
             LOGO
           </Typography>
-          <Button
-            onClick={() => {
-              i18n.changeLanguage('en');
-            }}>
-            en
-          </Button>
-          <Button
-            onClick={() => {
-              i18n.changeLanguage('ru');
-            }}>
-            ru
-          </Button>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
