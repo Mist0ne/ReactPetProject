@@ -1,5 +1,4 @@
-import { ILanguageItem } from './UISettings.types';
-import { ESupportedLanguages } from 'shared';
+import { ESupportedLanguages, ILanguageItem } from './UISettings.types';
 import FreeBreakfastIcon from '@mui/icons-material/FreeBreakfast';
 import PetsIcon from '@mui/icons-material/Pets';
 import React from 'react';

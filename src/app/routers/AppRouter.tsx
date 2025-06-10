@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 import { ProfilePage } from 'pages/Profile';
 
-export const ProjectRoutes = () => {
+export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigate replace to="/tournaments" />} />

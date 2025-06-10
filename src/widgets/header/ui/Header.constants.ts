@@ -1,4 +1,4 @@
-import { EPages, PageItem } from './AppBar.types';
+import { EPages, PageItem } from './Header.types';
 
 // ToDo Вынести это в общие настройки приложения
 export const PROJECT_PAGES: PageItem[] = [

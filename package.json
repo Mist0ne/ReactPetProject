@@ -28,6 +28,8 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
+    "steiger": "0.5.7",
+    "@feature-sliced/steiger-plugin": "0.5.6",
     "@testing-library/react": "^12.1.4",
     "@types/node": "^22.13.14",
     "@types/react": "^19.0.12",

@@ -1,6 +1,10 @@
 import { SvgIconComponent } from '@mui/icons-material';
-import { ESupportedLanguages } from 'shared';
 import { ReactElement } from 'react';
+
+export enum ESupportedLanguages {
+  RU = 'ru',
+  EN = 'en',
+}
 
 export enum ESupportedThemes {
   dark = 'dark',

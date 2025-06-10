@@ -15,11 +15,11 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { useTranslation } from 'shared/i18n';
-import { EPages } from './AppBar.types';
+import { EPages } from './Header.types';
 import { Link } from 'react-router-dom';
-import { PROJECT_PAGES } from './AppBar.constants';
+import { PROJECT_PAGES } from './Header.constants';
 
-export const AppBar = () => {
+export const Header = () => {
   const { t } = useTranslation('translation');
   // ToDo переделать на enum и вынести текст в i18n
   const pages = [EPages.TOURNAMENTS, EPages.ABOUT_US];

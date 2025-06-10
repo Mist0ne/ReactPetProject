@@ -8,7 +8,7 @@ import {
   Grid2,
   Typography,
 } from '@mui/material';
-import { UISettings } from './SettingsComponents/UISettings';
+import { UISettings } from './ui-settings';
 
 export const ProfilePage = () => {
   return (

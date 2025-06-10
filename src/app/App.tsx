@@ -1,13 +1,12 @@
-import './App.css';
 import React from 'react';
-import { AppBar } from '../widgets/AppBar';
-import { ProjectRoutes } from '../shared/router';
+import { Header } from '../widgets/header';
+import { AppRouter } from './routers';
 
 function App() {
   return (
     <>
-      <AppBar />
-      <ProjectRoutes />
+      <Header />
+      <AppRouter />
     </>
   );
 }
