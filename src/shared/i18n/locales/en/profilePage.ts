@@ -1,7 +1,7 @@
 export default {
   UISettings: 'UI Settings',
   language: 'Language',
-  darkTheme: 'Dark Theme',
+  darkTheme: 'Dark theme',
   languages: {
     en: 'EN',
     ru: 'RU'

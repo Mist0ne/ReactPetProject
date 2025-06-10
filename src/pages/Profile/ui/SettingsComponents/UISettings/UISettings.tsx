@@ -19,7 +19,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import MaleIcon from '@mui/icons-material/Male';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'shared/i18n';
 import { ESupportedThemes } from './UISettings.types';
 import { useLanguageList } from './UISettings.tools';
 

@@ -13,9 +13,11 @@ import {
   Avatar,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
-import { useTranslation } from '../i18n';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import { useTranslation } from 'shared/i18n';
 import { EPages } from './AppBar.types';
+import { Link } from 'react-router-dom';
+import { PROJECT_PAGES } from './AppBar.constants';
 
 export const AppBar = () => {
   const { t } = useTranslation('translation');
@@ -49,12 +51,12 @@ export const AppBar = () => {
     <MuiAppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <EmojiEventsIcon
+            sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -62,9 +64,8 @@ export const AppBar = () => {
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
-              textDecoration: 'none',
             }}>
-            LOGO
+            EOP
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -92,16 +93,20 @@ export const AppBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}>
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>
-                    {t(`pages.${page}`)}
-                  </Typography>
+              {PROJECT_PAGES.map((page) => (
+                <MenuItem
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  component={Link}
+                  to={page.route}>
+                  {t(`pages.${page.name}`)}
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <EmojiEventsIcon
+            sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -117,15 +122,16 @@ export const AppBar = () => {
               color: 'inherit',
               textDecoration: 'none',
             }}>
-            LOGO
+            EOP
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {PROJECT_PAGES.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}>
-                {t(`pages.${page}`)}
+                component={Link}
+                key={page.name}
+                to={page.route}
+                onClick={handleCloseNavMenu}>
+                {t(`pages.${page.name}`)}
               </Button>
             ))}
           </Box>
@@ -151,10 +157,12 @@ export const AppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}>
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>
-                    {setting}
-                  </Typography>
+                <MenuItem
+                  key={setting}
+                  onClick={handleCloseUserMenu}
+                  component={Link}
+                  to="/profile">
+                  {setting}
                 </MenuItem>
               ))}
             </Menu>

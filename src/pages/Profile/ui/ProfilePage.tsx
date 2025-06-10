@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { UISettings } from './SettingsComponents/UISettings';
 
-export const Profile = () => {
+export const ProfilePage = () => {
   return (
     <Container sx={{ py: 3 }}>
       <Grid2 container spacing={2}>

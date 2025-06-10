@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import { AppBar } from './AppBar';
-import { ProjectRoutes } from './routes';
+import { AppBar } from '../widgets/AppBar';
+import { ProjectRoutes } from '../shared/router';
 
 function App() {
   return (

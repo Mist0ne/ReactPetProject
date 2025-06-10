@@ -1,5 +1,5 @@
 import { ILanguageItem } from './UISettings.types';
-import { useTranslation } from 'app/i18n';
+import { useTranslation } from 'shared/i18n';
 import { languageList } from './UISettings.constants';
 
 export const useLanguageList = (): ILanguageItem[] => {
